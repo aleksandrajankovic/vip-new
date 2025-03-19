@@ -121,7 +121,6 @@ footer {
   justify-content: start;
   align-items: center;
   gap: 20px;
-
 }
 .social-networks-icons img {
   height: 20px;
@@ -151,8 +150,18 @@ footer {
   position: absolute;
   right: 0;
   width: 24%;
-  height: 13%;
+  height: 18%;
   background: linear-gradient(to left, rgba(76, 0, 0, 0.9), transparent);
+
+  z-index: 10;
+}
+.sponsorships-icons::before {
+  content: "";
+  position: absolute;
+
+  width: 24%;
+  height: 13%;
+  background: linear-gradient(to right, rgba(76, 0, 0, 0.9), transparent);
 
   z-index: 10;
 }
@@ -231,6 +240,17 @@ footer {
 }
 
 .payments::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(76, 0, 0, 0.9), transparent);
+
+  z-index: 10;
+}
+.payments-icons::before {
   content: "";
   position: absolute;
   top: 0;
