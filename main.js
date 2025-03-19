@@ -44,7 +44,7 @@ function createModal(content) {
 
   // Dodavanje h4 elementa samo ako postoji description3
   const description3Html = content.description3
-    ? `<h4 class="text-gold text-[14px] text-center sm:text-base">${content.description3}</h4>`
+    ? `<h4 class="text-gold text-[14px] max-[500px]:text-[12px] text-center sm:text-base">${content.description3}</h4>`
     : "";
 
   modalText.innerHTML = descriptionHtml + description3Html;
