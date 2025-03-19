@@ -1,5 +1,15 @@
 import vipContent from "./vipContent.js";
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.getElementById("preloader");
+  setTimeout(() => {
+    preloader.classList.remove("opacity-100");
+    preloader.classList.add("opacity-0", "pointer-events-none");
 
+    preloader.addEventListener("transitionend", () => {
+      preloader.style.display = "none";
+    });
+  }, 2000);
+});
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("mainTitle").textContent = vipContent.hero.mainTitle;
   document.getElementById("subTitle").textContent = vipContent.hero.subTitle;
@@ -104,17 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const preloader = document.getElementById("preloader");
-  setTimeout(() => {
-    preloader.classList.remove("opacity-100");
-    preloader.classList.add("opacity-0", "pointer-events-none");
 
-    preloader.addEventListener("transitionend", () => {
-      preloader.style.display = "none";
-    });
-  }, 2000);
-});
 
 function autoSlide(swiperContainer) {
   const wrapper = swiperContainer.querySelector(".swiper-wrapper");
