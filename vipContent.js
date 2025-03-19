@@ -2,7 +2,7 @@ const vipContent = {
   hero: {
     mainTitle: "MESTO VRHUNSKE ZABAVE, STVORENO ZA ONE KOJI VOLE",
     subTitle: "IGRU I UZBUĐENJE!",
-    backgroundImage: "/images/hero-bg.png",
+    backgroundImage: "./images/hero-bg.png",
   },
   content: {
     description1:
@@ -15,8 +15,8 @@ const vipContent = {
   vipCards: {
     casino: {
       title: "Kazino VIP",
-      image: "/images/kazino.png",
-      popupBackground: "/images/background-casino.png",
+      image: "./images/kazino.png",
+      popupBackground: "./images/background-casino.png",
       description: "<span>Visoki depoziti</span>",
       description1:
         "<span>Praćenje aktivnosti</span> – Status se redovno ažurira, aktivnost je ključna.",
@@ -27,8 +27,8 @@ const vipContent = {
     },
     sport: {
       title: "Sport VIP",
-      image: "/images/sport.png",
-      popupBackground: "/images/background-sport.png",
+      image: "./images/sport.png",
+      popupBackground: "./images/background-sport.png",
       description: "<span>Visoki depoziti</span>",
       description1:
         "<span>Praćenje aktivnosti</span> – Status se redovno ažurira, aktivnost je ključna.",
@@ -39,22 +39,22 @@ const vipContent = {
     },
   },
   payout: {
-    icon: "/images/euro-icon.png",
-    popupBackground: "/images/background-euro.png",
+    icon: "./images/euro-icon.png",
+    popupBackground: "./images/background-euro.png",
     description4: [
       "<span'>Pružamo vam posebnu priliku da otvorite put ka većim sumama i povećanim limitom podizanja novca.</span>",
     ],
   },
   tickets: {
-    icon: "/images/ticket-icon.png",
-    popupBackground: "/images/background-ticket.png",
+    icon: "./images/ticket-icon.png",
+    popupBackground: "./images/background-ticket.png",
     description4: [
       "<span'>Pružamo privilegovanu mogućnost rezervacije ulaznica za VIP klijente -pošaljite upit i garantujemo vam mesto.</span>",
     ],
   },
   bonus: {
-    icon: "/images/gift-icon.png",
-    popupBackground: "/images/background-bonus.png",
+    icon: "./images/gift-icon.png",
+    popupBackground: "./images/background-bonus.png",
     description4: [
       "<span'>Preuzmite ekskluzivne bonus pakete  i pogodnosti. Uživajte u posebno prilagođenim nagradama samo za vas.</span>",
     ],
