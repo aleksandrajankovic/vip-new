@@ -22,7 +22,6 @@ function createModal(content) {
   modalText.className =
     "w-full h-full flex flex-col items-center justify-center mt-10 p-8";
 
-  // Kreiramo listu stavki samo ako one postoje
   let listItems = "";
   if (content.description) {
     listItems += `<li class="text-gold">${content.description}</li>`;
@@ -37,12 +36,10 @@ function createModal(content) {
     listItems += `<li class="popup-center">${content.description4}</li>`;
   }
 
-  // Ako nijedna stavka ne postoji, možete postaviti podrazumevanu vrednost ili ostaviti prazan string
   const descriptionHtml = listItems
     ? `<ul class="list-none text-left text-[14px] max-[500px]:text-[12px] font-normal space-y-3 px-3 pt-5 my-4">${listItems}</ul>`
     : "";
 
-  // Dodavanje h4 elementa samo ako postoji description3
   const description3Html = content.description3
     ? `<h4 class="text-gold text-[14px] max-[500px]:text-[12px] text-center sm:text-base">${content.description3}</h4>`
     : "";
@@ -69,7 +66,6 @@ function openModal(cardKey) {
 }
 
 function openIconModal(iconKey) {
-  // Pretpostavljamo da su podaci za ikone direktno u vipContent
   const content = vipContent[iconKey];
   if (!content) return;
   const modal = createModal(content);
@@ -91,7 +87,6 @@ function closeModal() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Registracija za VIP kartice
   const vipCards = document.querySelectorAll(".vip-card");
   vipCards.forEach((card) => {
     card.addEventListener("click", () => {
@@ -100,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Registracija za VIP ikone
   const vipIcons = document.querySelectorAll(".vip-icon");
   vipIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
@@ -115,9 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     preloader.classList.remove("opacity-100");
     preloader.classList.add("opacity-0", "pointer-events-none");
-    // Opcionalno, nakon završetka tranzicije, sklonite element iz DOM-a
+
     preloader.addEventListener("transitionend", () => {
       preloader.style.display = "none";
     });
-  }, 3000);
+  }, 2000);
 });

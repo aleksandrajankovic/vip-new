@@ -337,7 +337,7 @@ footer {
 }
 
 .animate-reveal {
-  animation: revealFromLeft 3s ease-out forwards;
+  animation: revealFromLeft 2s ease-out forwards;
 }
 
 @media screen and (max-width: 440px) {
