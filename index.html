@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIP Lounge</title>
+    <!-- Ako koristite CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="relative font-montserrat">
+     <!-- Preloader -->
+     <div
+     id="preloader"
+     class="fixed inset-0 z-50 flex flex-col items-center justify-center transition-opacity duration-500 opacity-100"
+     style="
+       background: url('/images/Preloader.png');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+     "
+   >
+     <img
+       src="/images/logo.png"
+       alt="Meridian Logo"
+       class="w-40 h-auto mb-3 animate-slide-in"
+     />
+     <h1
+       class="font-montserrat font-semibold text-[40px] leading-[100%] text-center bg-clip-text text-transparent bg-gradient-vip animate-reveal"
+     >
+       VIP <span class="font-normal">LOUNGE</span>
+     </h1>
+    </div>
+    <div class="wrapper">
+      <div class="relative min-h-screen py-16 px-4">
+        <!-- Pattern preko pozadine -->
+        <div
+          class="absolute inset-0 bg-[url('/images/pattern.png')] bg-repeat"
+        ></div>
+        <!-- Gradijent preko patterna s opacitetom -->
+        <div
+          class="absolute inset-0 bg-[linear-gradient(180deg,_#4C0000_5.31%,_#670000_20.56%,_#B90000_42.33%,_#4C0000_100%)] opacity-95"
+        ></div>
+
+        <!-- Centralni sadržaj s borderom i custom gradijentom -->
+        <div
+          class="relative max-w-7xl mx-auto bg-[linear-gradient(180deg,#4C0000_5.31%,#670000_20.56%,#B90000_56.06%,#4C0000_100%)] border-2 border-[#B90000] rounded-[12px]"
+        >
+          <section
+            class="relative h-[600px] sm:h-[800px] bg-[url('/images/Background.png')] bg-cover bg-center overflow-hidden"
+          >
+            <div class="absolute inset-0 opacity-40"></div>
+            <div
+              class="absolute bottom-0 left-0 right-0 flex flex-col items-center pb-3 px-4 sm:px-8 gap-2 sm:gap-2 md:gap-3"
+            >
+              <img
+                src="/images/logo.png"
+                alt="Logo"
+                class="w-full h-auto max-w-[180px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[351px]"
+              />
+              <h1
+                class="font-montserrat font-semibold text-[60px] sm:text-[80px] md:text-[100px] lg:text-[110px] leading-[100%] text-center bg-clip-text text-transparent bg-gradient-vip"
+              >
+                VIP <span class="font-normal"> LOUNGE</span>
+              </h1>
+            </div>
+          </section>
+          <section
+            class="max-w-6xl mx-auto text-center py-2 px-4"
+            id="heroSection"
+          >
+            <h2
+              id="mainTitle"
+              class="font-montserrat font-normal tracking-normal text-center text-white text-[18px] sm:text-[21px] md:text-[18px] lg:text-[24px] leading-[30px] sm:leading-[55px] md:leading-[60px] lg:leading-[65px]"
+            ></h2>
+            <h3
+              id="subTitle"
+              class="font-montserrat font-medium text-[28px] md:text-[40px] lg:text-[44px] leading-[55px] tracking-normal text-center text-[#FCF5A3] p-2 animate-typewriter"
+            ></h3>
+            <p id="desc1" class="mt-4 text-white text-gold"></p>
+            <p id="desc2" class="mt-4 text-white"></p>
+          </section>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mt-8 px-4"
+          >
+            <div
+              class="vip-card rounded-lg p-6 text-center hover:scale-105 transition-transform cursor-pointer"
+              data-card="casino"
+            >
+              <img src="images/kazino.png" alt="Kazino VIP" class="mx-auto" />
+            </div>
+            <div
+              class="vip-card rounded-lg p-6 text-center hover:scale-105 transition-transform cursor-pointer"
+              data-card="sport"
+            >
+              <img src="images/sport.png" alt="Sport VIP" class="mx-auto" />
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto my-8"
+          >
+            <!-- 1. Ikona – Veći limiti isplata -->
+            <div
+              class="vip-icon flex flex-col items-center text-center hover:scale-105 transition-transform cursor-pointer"
+              data-icon="payout"
+            >
+              <img
+                src="images/euro-icon.png"
+                alt="Veći limiti isplata"
+                class="h-20 mx-auto"
+              />
+              <p class="text-white mt-2">Veći limiti isplata</p>
+            </div>
+
+            <!-- 2. Ikona – Rezervacije ulaznica i karata -->
+            <div
+              class="vip-icon flex flex-col items-center text-center hover:scale-105 transition-transform cursor-pointer"
+              data-icon="tickets"
+            >
+              <img
+                src="images/ticket-icon.png"
+                alt="Rezervacije ulaznica i karata"
+                class="h-20 mx-auto"
+              />
+              <p class="text-white mt-2">Rezervacije ulaznica i karata</p>
+            </div>
+
+            <!-- 3. Ikona – Specijalne nagrade i bonusi -->
+            <div
+              class="vip-icon flex flex-col items-center text-center hover:scale-105 transition-transform cursor-pointer"
+              data-icon="bonus"
+            >
+              <img
+                src="images/gift-icon.png"
+                alt="Specijalne nagrade i bonusi"
+                class="h-20 mx-auto"
+              />
+              <p class="text-white mt-2">Specijalne nagrade i bonusi</p>
+            </div>
+          </div>
+
+          <!-- Kontejner u koji se ubacuje modal -->
+          <div id="modal-container"></div>
+
+          <section class="max-w-6xl mx-auto text-center py-4 px-4 my-8">
+            <p id="desc3" class="mt-4 text-white text-gold"></p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
