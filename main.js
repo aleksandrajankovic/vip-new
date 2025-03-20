@@ -5,20 +5,27 @@ window.onload = () => {
   const preloader = document.getElementById("preloader");
   const wrapper = document.querySelector(".wrapper");
   
+  // Uveri se da je wrapper već "učitan" i nevidljiv, ali prisutan.
+  // Ako koristiš Tailwind, dodaj u HTML klasu "opacity-0" na wrapper.
+  wrapper.style.visibility = "visible";
+  
   setTimeout(() => {
-    // Fade out preloader
+    // Fade out preloader i istovremeno fade in wrapper
     preloader.classList.remove("opacity-100");
     preloader.classList.add("opacity-0", "pointer-events-none");
     
+    // Pokreni fade-in wrapper odmah
+    wrapper.classList.remove("opacity-0");
+    wrapper.classList.add("opacity-100");
+    
     preloader.addEventListener("transitionend", () => {
       preloader.style.display = "none";
-      // Fade in wrapper
-      wrapper.classList.remove("opacity-0");
-      wrapper.classList.add("opacity-100");
       document.body.classList.remove("overflow-hidden");
     });
   }, 2000);
 };
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
