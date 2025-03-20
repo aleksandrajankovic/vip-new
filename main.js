@@ -1,20 +1,25 @@
 import vipContent from "./vipContent.js";
 
 window.onload = () => {
-  // Sakrij body scroll dok je preloader aktivan
   document.body.classList.add("overflow-hidden");
   const preloader = document.getElementById("preloader");
+  const wrapper = document.querySelector(".wrapper");
+  
   setTimeout(() => {
+    // Fade out preloader
     preloader.classList.remove("opacity-100");
     preloader.classList.add("opacity-0", "pointer-events-none");
-
+    
     preloader.addEventListener("transitionend", () => {
       preloader.style.display = "none";
-      // Omogući scroll nakon što preloader nestane
+      // Fade in wrapper
+      wrapper.classList.remove("opacity-0");
+      wrapper.classList.add("opacity-100");
       document.body.classList.remove("overflow-hidden");
     });
   }, 2000);
 };
+
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("mainTitle").textContent = vipContent.hero.mainTitle;
