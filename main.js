@@ -1,5 +1,8 @@
 import vipContent from "./vipContent.js";
+
 window.onload = () => {
+  // Sakrij body scroll dok je preloader aktivan
+  document.body.classList.add("overflow-hidden");
   const preloader = document.getElementById("preloader");
   setTimeout(() => {
     preloader.classList.remove("opacity-100");
@@ -7,6 +10,8 @@ window.onload = () => {
 
     preloader.addEventListener("transitionend", () => {
       preloader.style.display = "none";
+      // Omogući scroll nakon što preloader nestane
+      document.body.classList.remove("overflow-hidden");
     });
   }, 2000);
 };
@@ -114,8 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-
 
 function autoSlide(swiperContainer) {
   const wrapper = swiperContainer.querySelector(".swiper-wrapper");
