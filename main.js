@@ -1,5 +1,5 @@
 import vipContent from "./vipContent.js";
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
   const preloader = document.getElementById("preloader");
   setTimeout(() => {
     preloader.classList.remove("opacity-100");
@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
       preloader.style.display = "none";
     });
   }, 2000);
-});
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("mainTitle").textContent = vipContent.hero.mainTitle;
   document.getElementById("subTitle").textContent = vipContent.hero.subTitle;
