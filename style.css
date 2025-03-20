@@ -152,20 +152,17 @@ footer {
   content: "";
   position: absolute;
   right: 0;
-  width: 24%;
-  height: 18%;
+  width: 10%;
+  height: 100%;
   background: linear-gradient(to left, rgba(76, 0, 0, 0.9), transparent);
-
   z-index: 10;
 }
 .sponsorships-icons::before {
   content: "";
   position: absolute;
-
-  width: 24%;
-  height: 13%;
+  width: 10%;
+  height: 65%;
   background: linear-gradient(to right, rgba(76, 0, 0, 0.9), transparent);
-
   z-index: 10;
 }
 .sponsorships-text h3 {
@@ -236,12 +233,10 @@ footer {
 }
 .swiper-wrapper {
   display: flex;
-
 }
 .swiper-slide {
   flex-shrink: 0;
 }
-
 
 .payments::before {
   content: "";
@@ -369,5 +364,4 @@ footer {
   .footer-wrapper {
     width: 90%;
   }
-
 }
