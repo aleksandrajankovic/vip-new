@@ -154,7 +154,7 @@ footer {
   position: absolute;
   right: 0;
   width: 20%;
-  height: 13%;
+  height: 100%;
   background: linear-gradient(to left, rgba(76, 0, 0, 0.9), transparent);
   z-index: 10;
 }
@@ -162,7 +162,7 @@ footer {
   content: "";
   position: absolute;
   width: 10%;
-  height: 7%;
+  height: 70%;
   background: linear-gradient(to right, rgba(76, 0, 0, 0.9), transparent);
   z-index: 10;
 }
