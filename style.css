@@ -162,7 +162,7 @@ footer {
   content: "";
   position: absolute;
   width: 10%;
-  height: 20%;
+  height: 12%;
   background: linear-gradient(to right, rgba(76, 0, 0, 0.9), transparent);
   z-index: 10;
 }
