@@ -48,7 +48,7 @@ function createModal(content) {
 
   const modalText = document.createElement("div");
   modalText.className =
-    "w-full h-full flex flex-col items-center justify-center mt-10 p-8";
+    "w-full h-full flex flex-col items-center justify-center mt-5 p-8";
 
   let listItems = "";
   if (content.description) {
@@ -65,7 +65,7 @@ function createModal(content) {
   }
 
   const descriptionHtml = listItems
-    ? `<ul class="list-none text-left text-[14px] max-[500px]:text-[12px] font-normal space-y-3 px-3 pt-5 my-4">${listItems}</ul>`
+    ? `<ul class="list-none text-left text-[14px] max-[500px]:text-[12px] font-normal space-y-1 px-3 pt-6 my-4">${listItems}</ul>`
     : "";
 
   const description3Html = content.description3
